@@ -61,7 +61,7 @@
         transform: translateX(10%);
     }
 }
-@media (max-width: 550px) {
+@media (max-width: 650px) {
     .header {
         margin: 0;
         height: 80px;
