@@ -99,7 +99,7 @@ a {
 }
 
 .sal-content {
-    font-size: clamp(2.3rem, 4.8vw, 8rem);
+    font-size: clamp(3.3rem, 4.8vw, 8rem);
     font-weight: 500;
 }
 
