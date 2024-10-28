@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap'); */
 
 
 * {
@@ -43,7 +43,8 @@ a {
     flex-wrap: nowrap;
 }
 
-.menu-btn {
+/* for the bigger screen sizes */
+.menu-toggler {
     display: none;
 }
 
@@ -78,7 +79,9 @@ a {
     padding-left: 1rem;
     width: 45%;
 }
-
+.menu-toggler {
+    display: none;
+}
 .sal {
     text-transform: uppercase;
     color: #cf4343;
@@ -99,7 +102,7 @@ a {
 }
 
 .sal-content {
-    font-size: clamp(3.3rem, 4.8vw, 8rem);
+    font-size: clamp(2.3rem, 4.8vw, 8rem);
     font-weight: 500;
 }
 

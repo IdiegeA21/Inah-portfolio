@@ -56,7 +56,6 @@
     .sal-content {
         text-align: center;
         font-weight: 600;
-        background-color: #ffffff4a;
     }
     .intro-btn {
         transform: translateX(10%);
@@ -69,52 +68,109 @@
         width: 100%;
         padding: 0 1rem;
         top: 0;
+        background-color: rgba(58, 51, 51, 0.158);
+        position: fixed;
+
     }
+    .brand {
+        z-index: 10;
+    }
+    .brand a{
+        color: white;
+    }
+    .menu{
+        overflow: hidden;
+    }
+
+    /* redesigning the navmenu to take the whole screen */
     .menu ul {
-        display: none;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        left: 100%;
+        background-color: #191919;
+        width: 100vw;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        transition-duration: .5s;
     }
-    .menu-btn {
+    
+    .menu ul li {
+        margin: 2rem auto;
+        font-size: 1.3rem;
+    }
+
+
+    /* navbar button for smaller screen sizes */
+    .menu-toggler {
+        display: flex; /* this cancels out the previous decleared display of none */
+        align-items: center;
+        justify-content: center;
         width: 30px;
-        height: 20px;
+        height: 30px;
         cursor: pointer;
-        position: relative;
+        z-index: 10;
+        position: fixed;
+        top: 23px;
+        right: 20px;
+    }
+
+    .menu-toggler>span,
+    .menu-toggler>span::after,
+    .menu-toggler>span::before {
         display: block;
-      }
-      
-      .line1, .line2, .line3 {
         position: absolute;
         width: 100%;
         height: 2px;
-        background-color: #d7cece;
-        transition: transform 0.3s ease-in-out;
-      }
-      
-      .line1 {
-        top: 0;
-      }
-      
-      .line2 {
-        top: 8px;
-      }
-      
-      .line3 {
-        bottom: 0;
-      }
-      
-      .menu-button.clicked .line1 {
-        transform: rotate(45deg) translate(7px, 7px);
-      }
-      
-      .menu-button.clicked .line2 {
-        opacity: 0;
-      }
-      
-      .menu-button.clicked .line3 {
-        transform: rotate(-45deg) translate(7px, -7px);
-      }
+        background-color: #ffffff;
+        transition-duration: .25s;
+    }
 
+    .menu-toggler>span {
+        position: relative;
+    }
+
+    .menu-toggler>span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .menu-toggler>span::after {
+        content: '';
+        top: 8px;
+    }
+    .menu-toggler.tive {
+        display: flex;
+    }
+    .menu-toggler.tive>span {
+        transform: rotate(45deg);
+        transition-duration: .25s;
+    }
+
+    .menu-toggler.tive>span::before {
+        top: 0;
+        transform: rotate(0);
+        transition-duration: .25s;
+    }
+
+    .menu-toggler.tive>span::after {
+        top: 0;
+        transform: rotate(90deg);
+        transition-duration: .25s;
+    }
+    /* end of navbar toggler */
+
+    /* style to bring the smaller nav menu into viewport */
+    .menu ul.open {    
+        top: 0;
+        left: 0;
+    }
     .intro-content {
         transform: translateY(15%);
+        background-color: #ffffffb8;
+        padding-bottom: 3rem;
     }
 
     .intro-image img {

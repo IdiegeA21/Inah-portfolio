@@ -7,6 +7,7 @@
     <title>Inah</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./responsive.css">
+    <!-- <link rel="stylesheet" href="./practiceResponsive.css"> -->
 </head>
 
 <body class="public-font">
@@ -18,15 +19,26 @@
         <nav class="menu">
             <ul>
                 <li><a class="active" href="#">Intro</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Works</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="menu-btn">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+
+            <div class="menu-toggler">
+                <span></span>
             </div>
+            <script>
+                let mbtn = document.querySelector('.menu-toggler');
+                mbtn.addEventListener('click', () => {
+                    mbtn.classList.toggle('tive');
+                    document.querySelector(".menu ul").classList.toggle("open");
+                })
+            </script>
+            <!-- style for menu-toggler -->
+            <style>
+
+
+            </style>
         </nav>
     </header>
 
@@ -49,7 +61,7 @@
 
         </div>
         <div class="intro-image">
-            <img src="./images/inah-image.jpg" alt="My Picture">
+            <img src="./images/inah-image2.jpg" alt="My Picture">
             <div class="handles">
                 <div class="get-my-cv">
                     <a href="#" class="btn btn-transparent">Get My cv</a>
@@ -276,9 +288,11 @@
             <div class="foot">
                 <section class="foot1">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas illum quasi facere libero,
-                        fugiat laboriosam possimus amet consectetur adipisicing elit reprehenderit eveniet tempore
-                        quisquam ipsa id esse. Facere ratione dignissimos.
+                        With a dedication to crafting innovative web applications, 
+                        I combine technical expertise and
+                        creativity to deliver impactful solutions. Reach out, and let's 
+                        turn your ideas into digital
+                        success together!
                     </p>
                     <div class="cn-me">
 
